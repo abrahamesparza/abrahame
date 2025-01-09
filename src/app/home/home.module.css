@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 10px;
+    margin-left: 35px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.littleName {
+    letter-spacing: 2px;
+}
+
+.bigNameContainer {
+    display: flex;
+    flex-flow: wrap;
+    width: fit-content;
+    border-bottom: 5px solid rgb(112, 60, 184);
+}
+.bigName {
+    font-size: 160px;
+    letter-spacing: 5px;
+}

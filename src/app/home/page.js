@@ -5,7 +5,12 @@ export default function Home() {
 
     return (
         <div className={styles.container}>
-            <h1>Home</h1>
+            <div className={styles.body}>
+                <h3 className={styles.littleName}>ABRAHAM ESPARZA</h3>
+                <div className={styles.bigNameContainer}>
+                    <h1 className={styles.bigName}>ABRAHAM</h1>
+                </div>
+            </div>
         </div>
     )
 }
