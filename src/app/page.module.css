@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
   --bg-color: #e5e5e5;
   --text-color: #171717;
@@ -15,28 +17,52 @@ body {
   height: 100vh;
 }
 
-.page {
-  display: grid;
-  height: 100%;
-  width: 100%;
-  grid-template-rows: 1fr 1fr;
-  place-items: center;
-  gap: 20px;
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 10px;
+    margin-left: 35px;
+    font-family: 'Roboto', sans-serif;
 }
 
-.name {
-  align-self: end;
-  font-size: 36px;
-  color: var(--text-color);
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
-.buttonContainer {
-  align-self: start;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.littleName {
+    letter-spacing: 2px;
 }
 
-.walkingIcon:hover {
-  color: var(--outline-color);
+.bigNameContainer {
+    display: flex;
+    flex-flow: wrap;
+    width: fit-content;
+    border-bottom: 5px solid rgb(112, 60, 184);
+}
+.bigName {
+    font-size: 160px;
+    letter-spacing: 5px;
+}
+
+/* ---- */
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    gap: 20px;
+  /* background-color: green; */
+}
+
+.title {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.aboutText {
+    line-height: 25px;
+    font-size: 14px;
+    font-family: monospace;
 }
