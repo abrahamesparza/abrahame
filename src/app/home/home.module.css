@@ -28,3 +28,24 @@
     font-size: 160px;
     letter-spacing: 5px;
 }
+
+/* ---- */
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    gap: 20px;
+  /* background-color: green; */
+}
+
+.title {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.aboutText {
+    line-height: 25px;
+    font-size: 14px;
+    font-family: monospace;
+}
