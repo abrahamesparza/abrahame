@@ -1,4 +1,5 @@
 'use client';
+import Projects from "./components/projects";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -13,6 +14,9 @@ export default function Home() {
             <div className={styles.aboutContainer}>
                 <h3 className={styles.title}>SOFTWARE ENGINEER</h3>
                 <p className={styles.aboutText}>LOCATED IN CALIFORNIA. OPEN TO RELOCATION.<br/>2+ YEARS OF PROFESSIONAL EXPERIENCE. SPECIALIZING IN CRAFTING ROBUST APIs, STREAMLINING DEVOPS WORKFLOWS, AUTOMATING PROCESSES, AND BUILDING EFFICIENT ETL PIPELINES.</p>
+            </div>
+            <div className={styles.projects}>
+                <Projects/>
             </div>
         </div>
     </div>
