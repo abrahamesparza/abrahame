@@ -4,3 +4,14 @@
     grid-template-columns: 1fr 1fr;
     width: 100vw;
 }
+.projectInfo {
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 50px;
+}
+.projectContainer {
+    gap: 20px;
+}
+.projectDescription {
+    margin-top: 10px;
+}
