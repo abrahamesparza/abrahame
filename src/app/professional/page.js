@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from 'next/navigation';
 
 import styles from '../page.module.css';
 import Projects from '../components/projects';
@@ -7,18 +8,12 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 
 
 export default function Professional() {
-
-    const handlePageRender = (e) => {
-        const page = e.target.innerText;
-        if (page === 'PROFESSIONAL') {
-            router.push('/professional');
-        }
-    }
+    const router = useRouter();
 
     return (
         <div className={styles.container}>
             <div className={styles.backButton}>
-                <IoIosArrowRoundBack size={25}/>
+                <IoIosArrowRoundBack onClick={() => router.push('/')} size={25}/>
             </div>
             <div className={styles.body}>
                 <div className={styles.bigNameContainer}>
