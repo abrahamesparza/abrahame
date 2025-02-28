@@ -1,5 +1,6 @@
 'use client';
 import About from "./components/about";
+import Navigation from "./components/navigation";
 import Projects from "./components/projects";
 import styles from "./page.module.css";
 
@@ -8,8 +9,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
         <div className={styles.body}>
-            {/* <h3 className={styles.littleName}>abraham esparza</h3> */}
-            {/* maybe add a photo of myself here or of me and my family */}
+            {/* <Navigation/> */}
             <div className={styles.bigNameContainer}>
                 <h1 className={styles.bigName}>Æ</h1>
             </div>
