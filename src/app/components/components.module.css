@@ -57,6 +57,23 @@
     gap: 40px;
 }
 
+/* need to add responsiveness below */
+.navList {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navItems {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+/* ---end--- */
 /* Project Details - Two Column Layout on Larger Screens */
 .projectDetails {
     display: grid;
