@@ -71,3 +71,12 @@ body {
 .projects {
     padding-bottom: 50px;
 }
+
+/* ---- */
+
+.backButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
