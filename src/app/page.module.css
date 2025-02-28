@@ -2,7 +2,7 @@
 
 :root {
   --bg-color: #e5e5e5;
-  --text-color: #171717;
+  --text-color: #222;
   --accent-color: #4e4e4e;
   --hover-color: #ba9afb;
   --outline-color: #4c6ef5;
@@ -30,11 +30,7 @@ body {
 .body {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-}
-
-.littleName {
-    letter-spacing: 2px;
+    gap: 25px;
 }
 
 .bigNameContainer {
@@ -42,20 +38,16 @@ body {
     flex-flow: wrap;
     width: fit-content;
     border-bottom: 5px solid rgb(112, 60, 184);
+    border-radius: 10px;
 }
 .bigName {
     font-size: 160px;
-    letter-spacing: 5px;
 }
 
-/* ---- */
 
 .aboutContainer {
     display: flex;
     flex-direction: column;
-    width: 45vw;
-    gap: 20px;
-  /* background-color: green; */
 }
 
 .title {
@@ -72,7 +64,6 @@ body {
     padding-bottom: 50px;
 }
 
-/* ---- */
 
 .backButton {
     display: flex;
@@ -80,3 +71,36 @@ body {
     justify-content: flex-start;
     padding-top: 20px;
 }
+
+
+/* ---- Media Queries for Responsiveness ---- */
+
+@media (max-width: 1024px) {
+    .title {
+      font-size: 16px; /* Reduce size for tablets */
+    }
+  
+    .bigName {
+      font-size: 90px; /* Reduce size for tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 16px; /* Reduce size for tablets */
+    }
+  
+    .bigName {
+      font-size: 90px; /* Reduce size for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 12px; /* Reduce size for tablets */
+    }
+  
+    .bigName {
+      font-size: 90px; /* Reduce size for tablets */
+    }
+  }
