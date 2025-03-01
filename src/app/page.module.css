@@ -1,18 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-:root {
-  --bg-color: #e5e5e5;
-  --text-color: #222;
-  --accent-color: #4e4e4e;
-  --hover-color: #ba9afb;
-  --outline-color: #4c6ef5;
-  --outline-hover-color: #171717;
-}
-
 body {
   margin: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: #e5e5e5;;
+  color:#222;
   font-family: 'Arial', sans-serif;
   height: 100vh;
 }
