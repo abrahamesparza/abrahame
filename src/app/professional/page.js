@@ -5,6 +5,7 @@ import styles from '../page.module.css';
 import Projects from '../components/projects';
 
 import { IoIosArrowRoundBack } from "react-icons/io";
+import Navigation from '../components/navigation';
 
 
 export default function Professional() {
@@ -12,10 +13,8 @@ export default function Professional() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.backButton}>
-                <IoIosArrowRoundBack onClick={() => router.push('/')} size={25}/>
-            </div>
             <div className={styles.body}>
+                <Navigation />
                 <div className={styles.bigNameContainer}>
                     <h1 className={styles.bigName}>Æ</h1>
                 </div>
