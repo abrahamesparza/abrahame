@@ -8,10 +8,8 @@ export default function Navigation () {
     const listOptions = ['FAITH', 'FAMILY', 'PROFESSIONAL', 'BUSINESS'];
 
     const handlePageRender = (e) => {
-        const page = e.target.innerText;
-        if (page === 'PROFESSIONAL') {
-            router.push('/professional');
-        }
+        const page = e.target.innerText.toLowerCase();
+        router.push(`/${page}`);
     }
 
     return (
