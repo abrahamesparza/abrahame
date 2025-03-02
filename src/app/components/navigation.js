@@ -1,15 +1,17 @@
 'use client';
 import styles from './components.module.css';
-import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function Navigation () {
     const router = useRouter();
-    const listOptions = ['FAITH', 'FAMILY', 'PROFESSIONAL', 'BUSINESS'];
+    const listOptions = ['HOME', 'FAITH', 'FAMILY', 'PROFESSIONAL', 'BUSINESS'];
 
     const handlePageRender = (e) => {
         const page = e.target.innerText.toLowerCase();
-        router.push(`/${page}`);
+        if (page === 'home') router.push('/');
+        else {
+            router.push(`/${page}`);
+        }
     }
 
     return (
