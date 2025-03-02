@@ -40,14 +40,16 @@ export default function Projects() {
                     name: `${nameMapping[repo.name]}, Full-Stack Software Engineer`,
                     description: repo.description + ' A powerful and feature-rich full-stack blogging application, designed for seamless user interactions, content creation, and community building.',
                     url: repo.html_url,
-                    videoSrc: `/videos/${nameMapping[repo.name]}.mp4`
+                    videoSrc: `/videos/${nameMapping[repo.name]}.mp4`,
+                    link: 'https://journal-mvp-a5bfc416f691.herokuapp.com/'
                 })
             }
         });
         filtered.push({
             name: 'Winnie, Backend Engineer',
             description: 'A quick look at the work I did at Winnie, focusing on how we captured and processed child care center data. It walks through the state data sources we pulled from, shows dev tools in action, and highlights the specific elements I targeted to extract key information with scrapers I automated to run monthly.',
-            videoSrc: '/videos/Winnie.mp4'
+            videoSrc: '/videos/Winnie.mp4',
+            link: 'https://winnie.com/'
         })
         return filtered;
     }
@@ -58,7 +60,7 @@ export default function Projects() {
                 {projects.map((repo, index) => (
                     <div className={styles.projectDetails} key={index}>
                         <div>
-                            <h3 className={styles.projectName}>{repo.name}</h3>
+                            <h3 className={styles.projectName}><a className={styles.repoNameLink} target='_blank' href={repo.link}>{repo.name}</a></h3>
                             <p className={styles.projectDescription}>{repo.description}</p>
                         </div>
                         <div>
