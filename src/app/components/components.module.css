@@ -12,6 +12,15 @@
     gap: 40px;
 }
 
+.repoNameLink {
+    text-decoration: none;
+    color: #222;
+}
+
+.repoNameLink:hover {
+    color: rgb(85, 150, 255);
+}
+
 /* need to add responsiveness below */
 
 /* navigation.js */
@@ -29,6 +38,14 @@
     gap: 15px;
     padding: 0;
     margin: 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.navItems:hover {
+    cursor: pointer;
+    border-bottom: 2px solid rgb(112, 60, 184);
+    transform: translateY(-3px); 
 }
 
 /* studioIntro.js */
@@ -93,6 +110,10 @@
 .projectName {
     font-size: 1.8rem;
     font-weight: bold;
+    transition: border-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.projectName:hover {
+    transform: translateY(-3px);
 }
 
 /* Project Description */
