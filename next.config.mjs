@@ -10,6 +10,13 @@ const nextConfig = {
   
       return config;
     },
+    images: {
+      remotePatterns: [{
+        protocol: 'https',
+        hostname: 'esparza-studios.s3.amazonaws.com',
+        pathname: '/*'
+      }]
+    }
   };
 
 export default withNextVideo(nextConfig);
