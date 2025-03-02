@@ -64,6 +64,23 @@
   border-color: #222;
 }
 
+.crossContainer {
+  margin-top: 2%;
+}
+
+.cross {
+  font-size: 100px;
+}
+
+.faithContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
 
 /* ---- Media Queries for Responsiveness ---- */
 
@@ -75,6 +92,10 @@
     .bigName {
       font-size: 90px; /* Reduce size for tablets */
     }
+
+    .cross {
+      font-size: 75px;
+    }
   }
   
   @media (max-width: 768px) {
@@ -85,6 +106,10 @@
     .bigName {
       font-size: 90px; /* Reduce size for tablets */
     }
+
+    .cross {
+      font-size: 50px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -94,5 +119,9 @@
   
     .bigName {
       font-size: 90px; /* Reduce size for tablets */
+    }
+
+    .cross {
+      font-size: 50px;
     }
   }
