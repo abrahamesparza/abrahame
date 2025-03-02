@@ -53,6 +53,15 @@
     flex-direction: row;
     justify-content: flex-start;
     padding-top: 20px;
+    border-bottom: 2px solid transparent;
+    width: 25px;
+    border-bottom: 2px solid transparent;
+}
+
+.backButton:hover {
+  color: rgb(112, 60, 184);
+  border-bottom: 2px solid;
+  border-color: #222;
 }
 
 
