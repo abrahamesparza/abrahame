@@ -44,3 +44,5 @@ next-env.d.ts
 /public/videos
 
 .env.local
+
+cors-config.json
