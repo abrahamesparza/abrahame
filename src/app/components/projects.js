@@ -34,11 +34,16 @@ export default function Projects() {
 
     const filterData = (repos, videos) => {
         const filtered = [];
-        const { winnieUrl, journalUrl } = videos.reduce((acc, video) => ({
-            ...acc,
-            ...(video.key === 'winnie' && { winnieUrl: video.url }),
-            ...(video.key === 'journal' && { journalUrl: video.url }),
-        }), { winnieUrl: '', journalUrl: '' });
+        let winnieUrl = '';
+        let journalUrl = '';
+
+        for (let video of videos) {
+            if (video.key === 'winnie') {
+                winnieUrl = video.url;
+            } else if (video.key === 'journal') {
+                journalUrl = video.url;
+            }
+        };
 
         const repoMapping = {
             'blog-app': 'Journal'
