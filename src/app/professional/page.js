@@ -1,15 +1,11 @@
 'use client';
-import { useRouter } from 'next/navigation';
 
 import styles from '../page.module.css';
 import Projects from '../components/projects';
 
-import { IoIosArrowRoundBack } from "react-icons/io";
 import Navigation from '../components/navigation';
 
-
 export default function Professional() {
-    const router = useRouter();
 
     return (
         <div className={styles.container}>
