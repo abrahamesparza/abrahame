@@ -25,10 +25,9 @@ export async function GET(req, res) {
 
     const data = await s3.listObjectsV2(params).promise();
     const filteredData = data.Contents.slice(1);
-    console.log('data', filteredData);
 
     const videos = filteredData.map((file) => ({
-      key: file.Key,
+      key: file.Key.split('/')[1].split('-')[0].toLowerCase(),
       url: `https://${BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${file.Key}`,
     }));
 
