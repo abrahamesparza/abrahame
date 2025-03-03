@@ -19,36 +19,46 @@ export default function Projects() {
         if (!data) {
             setFound(false);
         }
-
-        const filteredData = filterData(data);
+        
+        const videos = await fetchProjectVideos();
+        const filteredData = filterData(data, videos);
         setProjects(filteredData);
         setFound(true);
+    };
+
+    const fetchProjectVideos = async () => {
+        const response = await fetch('/api/professional-videos');
+        const data = await response.json();
+        return data.message;
     }
 
-    const filterData = (repos) => {
+    const filterData = (repos, videos) => {
         const filtered = [];
-        const nameMapping = {
-            'blog-app': 'Journal',
+        const { winnieUrl, journalUrl } = videos.reduce((acc, video) => ({
+            ...acc,
+            ...(video.key === 'winnie' && { winnieUrl: video.url }),
+            ...(video.key === 'journal' && { journalUrl: video.url }),
+        }), { winnieUrl: '', journalUrl: '' });
+
+        const repoMapping = {
+            'blog-app': 'Journal'
         }
-        //sloppy atm since i took out two older repos
-        //will refactor later to only show one repo
-        //however, i am working on a new project so may
-        //keep this to include that repo as soon as it's done.
+
         repos.filter(repo => {
-            if (nameMapping[repo.name]) {
+            if (repoMapping[repo.name]) {
                 filtered.push({
-                    name: `${nameMapping[repo.name]}, Full-Stack Software Engineer`,
-                    description: repo.description + ' A powerful and feature-rich full-stack blogging application, designed for seamless user interactions, content creation, and community building.',
+                    name: `${repoMapping[repo.name]}, Full-Stack Software Engineer`,
+                    description: repo.description + ' A powerful and feature-rich full-stack blogging application, designed for seamless user interactions, and community building.',
                     url: repo.html_url,
-                    videoSrc: `/videos/${nameMapping[repo.name]}.mp4`,
+                    videoSrc: journalUrl,
                     link: 'https://journal-mvp-a5bfc416f691.herokuapp.com/'
                 })
             }
         });
         filtered.push({
             name: 'Winnie, Backend Engineer',
-            description: 'A quick look at the work I did at Winnie, focusing on how we captured and processed child care center data. It walks through the state data sources we pulled from, shows dev tools in action, and highlights the specific elements I targeted to extract key information with scrapers I automated to run monthly.',
-            videoSrc: '/videos/Winnie.mp4',
+            description: 'A quick look at some work I did at Winnie, focusing on how we captured and processed child care center data. It walks through the state data sources we pulled from, shows dev tools in action, and highlights the specific elements I targeted to extract key information with scrapers I automated to run monthly.',
+            videoSrc: winnieUrl,
             link: 'https://winnie.com/'
         })
         return filtered;
