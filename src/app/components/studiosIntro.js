@@ -1,7 +1,11 @@
 'use client';
+
+import { useRouter } from 'next/navigation';
 import styles from './components.module.css';
 
 export default function StudiosIntroduction() {
+    const router = useRouter();
+
     return (
         <div className={styles.introduction}>
             <div className={styles.statement}>
@@ -16,7 +20,7 @@ export default function StudiosIntroduction() {
                 <p>
                     Whether you're here to explore my projects, connect over shared values, or learn more about my journey, I'm glad you stopped by.
                 </p>
-                <p>Take a look around, and freel free to reach out (maybe add a mailto here?). I'd love to connect.</p>
+                <p>Take a look around, and freel free to <a className={styles.reachOutText} onClick={() => router.push('/contact')}>reach out</a>. I'd love to connect.</p>
             </div>
         </div>
     )

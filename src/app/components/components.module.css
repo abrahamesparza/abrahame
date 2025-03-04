@@ -153,6 +153,15 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+.reachOutText {
+    color: rgb(112, 60, 184);
+}
+.reachOutText:hover {
+    text-decoration: underline;
+    text-decoration-color: #222;
+    text-decoration-thickness: 1.5;
+    cursor: pointer;
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
