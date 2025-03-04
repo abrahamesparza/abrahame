@@ -29,6 +29,7 @@ export default function Projects() {
     const fetchProjectVideos = async () => {
         const response = await fetch('/api/professional-videos');
         const data = await response.json();
+        console.log('Data in fetchProjectVideos:', data)
         return data.message;
     }
 
