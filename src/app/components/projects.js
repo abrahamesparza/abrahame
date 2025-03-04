@@ -20,7 +20,7 @@ export default function Projects() {
             setFound(false);
         }
         
-        const videos = await fetchProjectVideos() || [];
+        const videos = await fetchProjectVideos();
         const filteredData = filterData(data, videos);
         setProjects(filteredData);
         setFound(true);
@@ -29,7 +29,6 @@ export default function Projects() {
     const fetchProjectVideos = async () => {
         const response = await fetch('/api/professional-videos');
         const data = await response.json();
-        console.log('Data in fetchProjectVideos:', data)
         return data.message;
     }
 
@@ -40,9 +39,9 @@ export default function Projects() {
 
         for (let video of videos) {
             if (video.key === 'winnie') {
-                winnieUrl = video.url || '';
+                winnieUrl = video.url;
             } else if (video.key === 'journal') {
-                journalUrl = video.url || '';
+                journalUrl = video.url;
             }
         };
 
