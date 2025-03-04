@@ -26,10 +26,20 @@ export async function GET(req, res) {
     const data = await s3.listObjectsV2(params).promise();
     const filteredData = data.Contents.slice(1);
 
-    const videos = filteredData.map((file) => ({
-      key: file.Key.split('/')[1].split('-')[0].toLowerCase(),
-      url: `https://${BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${file.Key}`,
-    }));
+    const videos = await Promise.all(
+      filteredData.map(async (file) => {
+        const signedUrl = s3.getSignedUrl('getObject', {
+          Bucket: BUCKET_NAME,
+          Key: file.Key,
+          Expires: 60 * 60,
+        });
+
+        return {
+          key: file.Key.split('/')[1].split('-')[0].toLowerCase(),
+          url: signedUrl, 
+        };
+      })
+    );
 
     return NextResponse.json({ message: videos });
   } catch (error) {
