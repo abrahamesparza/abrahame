@@ -72,7 +72,7 @@
   font-size: 100px;
 }
 
-.faithContainer {
+.faithContainer, .businessContainer, .familyContainer {
   display: flex;
   flex-direction: column;
   gap: 15px;
