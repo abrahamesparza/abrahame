@@ -14,7 +14,7 @@ const nextConfig = {
       remotePatterns: [{
         protocol: 'https',
         hostname: 'esparza-studios.s3.amazonaws.com',
-        pathname: '/**'
+        pathname: '/professional/*'
       }]
     }
   };
